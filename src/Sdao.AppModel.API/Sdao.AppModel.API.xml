@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sdao.AppModel.API</name>
+    </assembly>
+    <members>
+        <member name="T:Sdao.AppModel.API.Controllers.ContainerController">
+            <summary>
+            容器控制器
+            </summary>
+        </member>
+        <member name="F:Sdao.AppModel.API.Controllers.ContainerController._containerRepository">
+            <summary>
+            container接口
+            </summary>
+        </member>
+        <member name="F:Sdao.AppModel.API.Controllers.ContainerController._logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.#ctor(Sdao.AppModel.Data.Abstract.IContainerRepository,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="containerRepository">//实例化类(接口==>实现类)</param>
+            <param name="loggerFactory">loggerFactory</param>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.Get">
+            <summary>
+            获取所有Container信息。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.GetContainerById(System.Int64)">
+            <summary>
+            根据Id获取容器
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.GetContainersByCategoryId(System.Int64)">
+            <summary>
+            根据分类id获取所有容器
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.GetContainersByToken">
+            <summary>
+            根据Token获取Containers
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.CreateByToken(Sdao.AppModel.API.Models.ContainerPostModel)">
+            <summary>
+            由运营人员创建Container
+            </summary>
+            <param name="containerPostModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.Put(Sdao.AppModel.API.Models.ContainerPutModel)">
+            <summary>
+            修改Container
+            </summary>
+            <param name="containerPutModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.ContainerController.Delete(System.Int64)">
+            <summary>
+            通过Id删除property
+            </summary>
+            <param name="id">编号</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sdao.AppModel.API.Controllers.V3.SetUpController">
+            <summary>
+            数据库初始化生成
+            </summary>
+        </member>
+        <member name="F:Sdao.AppModel.API.Controllers.V3.SetUpController._ctx">
+            <summary>
+            上下文DbContext
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.V3.SetUpController.#ctor(Sdao.AppModel.Data.AppModelContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ctx"></param>
+        </member>
+        <member name="M:Sdao.AppModel.API.Controllers.V3.SetUpController.InitializeAsync">
+            <summary>
+            初始化:dotnet ef migrations add "initial"  如果没有migrations文件夹,则重新新生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sdao.AppModel.API.Convention.ApiExplorerGroupPerVersionConvention">
+            <summary>
+            // ApiExplorerGroupPerVersionConvention.cs
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Convention.ApiExplorerGroupPerVersionConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+            应用
+            </summary>
+            <param name="controller"></param>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.ContainerPostModel">
+            <summary>
+            ContainerPostModel
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPostModel.categoryId">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPostModel.containerName">
+            <summary>
+            容器名称
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPostModel.json">
+            <summary>
+            自定义json格式：可以写样式等:标题加粗处理
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.ContainerPutModel">
+            <summary>
+            ContainerPutModel
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPutModel.id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPutModel.categoryId">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPutModel.containerName">
+            <summary>
+            容器名称
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerPutModel.json">
+            <summary>
+            自定义json格式：可以写样式等:标题加粗处理
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.ContainerViewModel">
+            <summary>
+            ContainerViewModel
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerViewModel.id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerViewModel.categoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerViewModel.containerName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.ContainerViewModel.json">
+            <summary>
+            自定义 json 格式
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.IModelBase">
+            <summary>
+            基类:其它实体的父类接口.
+            </summary>
+        </member>
+        <member name="P:Sdao.AppModel.API.Models.IModelBase.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.Mappings.AutoMapperConfiguration">
+            <summary>
+            AutoMapperConfiguration
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Models.Mappings.AutoMapperConfiguration.Configure">
+            <summary>
+            Configure
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Models.Mappings.DomainToViewModelMappingProfile">
+            <summary>
+            领域对象与DTO（数据传输对象）之间的转换,数据库查询结果映射至实体.
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Models.Mappings.DomainToViewModelMappingProfile.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="T:Sdao.AppModel.API.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:Sdao.AppModel.API.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Sdao.AppModel.API.Program.BuildWebHost(System.String[])">
+            <summary>
+            BuildWebHost
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AppModel.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:AppModel.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AppModel.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:AppModel.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:AppModel.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+    </members>
+</doc>
