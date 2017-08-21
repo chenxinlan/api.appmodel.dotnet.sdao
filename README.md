@@ -2,7 +2,7 @@ api.appmodel.dotnet.sdao
 ============= 
 
 *  **操作权限列表**
->**AppModel_SetUp ½Ó¿Ú**
+>**AppModel_SetUp 接口**
 >
 >> * AppModel_SetUp_Initial
 >
