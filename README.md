@@ -1,12 +1,12 @@
 api.appmodel.dotnet.sdao
 ============= 
 
-*  **操作权限列表**
->**AppModel_SetUp 接口**
+*  **鎿嶄綔鏉冮檺鍒楄〃**
+>**AppModel_SetUp 陆脫驴脷**
 >
 >> * AppModel_SetUp_Initial
 >
->**AppModel_Container 接口**
+>**AppModel_Container 鎺ュ彛**
 >> * AppModel_Container_ReadAll
 >> * AppModel_Container_ReadByToken
 >> * AppModel_Container_ReadById
